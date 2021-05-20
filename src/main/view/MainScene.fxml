@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="712.0" prefWidth="907.0" text="Strongly Connected Component" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="576.0" prefWidth="617.0">
+         <children>
+            <SplitPane dividerPositions="0.17666666666666667" layoutX="-2.0" layoutY="-1.0" prefHeight="501.0" prefWidth="717.0">
+              <items>
+                <AnchorPane fx:id="left_menu_options" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Label layoutX="17.0" layoutY="90.0" onMouseClicked="#handleClickSolve" text="Solve" />
+                        <Label layoutX="17.0" layoutY="43.0" onMouseClicked="#handleClicKosaraju" text="Kosaraju" />
+                        <Label layoutX="17.0" layoutY="67.0" onMouseClicked="#handleClickTarjan" text="Tarjan" />
+                        <Label layoutX="17.0" layoutY="21.0" onMouseClicked="#handleClickResetBtn" text="Reset" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="200.0" minWidth="200.0">
+                     <children>
+                        <Pane fx:id="display_graph" prefHeight="500.0" prefWidth="585.0" />
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+            <TextArea fx:id="log_text" editable="false" layoutX="-1.0" layoutY="501.0" prefHeight="183.0" prefWidth="907.0" />
+            <Pane layoutX="749.0" layoutY="7.0" prefHeight="489.0" prefWidth="149.0">
+               <children>
+                  <Circle fill="#a47c4880" layoutX="27.0" layoutY="26.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Label layoutX="51.0" layoutY="18.0" onMouseClicked="#handleClickPrint" text="Not visited yet" />
+                  <Label layoutX="51.0" layoutY="61.0" text="Visited" />
+                  <Circle fill="#ff000080" layoutX="27.0" layoutY="69.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Label layoutX="51.0" layoutY="103.0" text="Doing DFS" />
+                  <Circle fill="#ff000080" layoutX="27.0" layoutY="112.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle fx:id="justDoneDfs" fill="#00ff0080" layoutX="28.0" layoutY="158.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Label layoutX="52.0" layoutY="150.0" text="Just done DFS" />
+                  <Button fx:id="next_btn" layoutX="43.0" layoutY="448.0" mnemonicParsing="false" onMouseClicked="#handleClickNextBtn" prefHeight="27.0" prefWidth="80.0" text="Pause" />
+               </children>
+            </Pane>
+         </children></AnchorPane>
+  </content>
+</TitledPane>
